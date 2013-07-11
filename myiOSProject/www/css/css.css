@@ -1,0 +1,40 @@
+body{
+	text-align: center;
+	width: 450px;
+	border: medium solid #0C0;
+	background-color: #FFF;
+}
+section{
+}
+table{
+	text-align: center;
+	position: relative;
+	margin: 3px;
+}
+h2{
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #0C0;
+	border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #0C0;
+	background-color: #EEE;
+	color: #030;
+}
+
+#contentArea{
+	text-align: center;
+}
+#header{
+	color: #060;
+}
+
+.item{
+	position: relative;
+	float: left;
+	margin: 2px;
+}
+.content{
+	clear: left;
+	text-align: center;
+}
