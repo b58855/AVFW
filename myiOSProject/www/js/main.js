@@ -1,4 +1,4 @@
-$('#instagram').on('pageinit', function()
+/*$('#instagram').on('pageinit', function()
 {
 	/*var url = "https://api.instagram.com/v1/media/popular?callback=?&amp;client_id=8143f39a078742e88debde9001247fef";
 	$.getJSON(url, function(images){
@@ -8,4 +8,4 @@ $('#instagram').on('pageinit', function()
 		});
 	});*/
 
-});
+});*/
