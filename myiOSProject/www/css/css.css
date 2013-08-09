@@ -1,40 +1,49 @@
 body{
 	text-align: center;
-	width: 450px;
-	border: medium solid #0C0;
-	background-color: #FFF;
 }
-section{
-}
-table{
-	text-align: center;
-	position: relative;
-	margin: 3px;
-}
-h2{
-	border-bottom-width: thin;
-	border-bottom-style: solid;
-	border-bottom-color: #0C0;
+
+.ui-bar-a{
+	background: #003300;
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 #000000;
 	border-top-width: thin;
+	border-bottom-width: thin;
 	border-top-style: solid;
-	border-top-color: #0C0;
-	background-color: #EEE;
-	color: #030;
+	border-bottom-style: solid;
+	border-top-color: #090;
+	border-bottom-color: #090;
 }
 
-#contentArea{
-	text-align: center;
-}
-#header{
-	color: #060;
+
+
+.ui-bar-b{
+	background: linear-gradient(#009900, #006600) repeat scroll 0 0 #00FF00;
+	border-top: 1px solid #002200;
+	border-bottom: 1px solid #002200;
 }
 
-.item{
-	position: relative;
-	float: left;
-	margin: 2px;
+
+
+
+.ui-btn{
+	margin-top: 1px;
+	margin-bottom: 1px;
 }
-.content{
-	clear: left;
-	text-align: center;
+.ui-btn-up-c{
+	background: linear-gradient(#AABBBB, #AABBAA) repeat scroll 0 0 #000000;
+}
+.ui-btn-down-c{
+	background: linear-gradient(#DDEEEE, #DDEEDD) repeat scroll 0 0 #000000;
+}
+.ui-btn-hover-c{
+	background: linear-gradient(#889999, #889988) repeat scroll 0 0 #000000;
+}
+.ui-btn-inner{
+	border: none;
+}
+.ui-shadow{
+	box-shadow: none;
+}
+.ui-btn-corner-all{
+	border-radius: 0px;
 }
