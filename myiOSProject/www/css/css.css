@@ -1,6 +1,82 @@
 body{
 	text-align: center;
 }
+content{
+}
+content div{
+	margin-top: 1px;
+	margin-bottom: 5px;
+}
+content div a{
+	height: 100px;
+	width: 300px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+content div h4{
+	margin-top: 2px;
+	margin-bottom: 2px;	
+}
+content ul{
+	padding-left: 0px;
+}
+#wikilocation content ul li{
+	height: 50px;
+	width: 100%;
+	background: linear-gradient(#AABBBB, #AABBAA) repeat scroll 0 0 #000000;
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 #000000;
+	margin-bottom: 2px;
+	list-style-type: none;
+	vertical-align: middle;
+	padding-top: 25px;
+}
+#wikilocation content ul li:hover{
+	background: linear-gradient(#889999, #889988) repeat scroll 0 0 #000000;
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 #000000;
+}
+#wikilocation content ul li:down{
+	background: linear-gradient(#889999, #889988) repeat scroll 0 0 #000000;
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 #000000;
+}
+#wikilocation content ul li a{
+	color: #FFFFFF;
+	text-shadow: 0 -1px 0 #000000;
+	text-decoration: none;
+}
+#instagramAPI content ul{
+	padding: 0px;
+}
+#instagramAPI content ul li{
+	float: left;
+	width: 23.5%;
+	height: 30%;
+	margin-left: .8%;
+	margin-bottom: 20px;
+	padding: 2px;
+	clear: right;
+	text-decoration: none;
+	list-style-type: none;
+}
+#instagramAPI content ul li img{
+	width: 100%;
+	text-decoration: none;
+}
+#instagramAPI content ul li a{
+	font-size: 75%;
+}
+label{
+	margin-top: 4px;
+	margin-bottom: 2px;
+}
+input{
+	margin-bottom: 5px;
+}
+
+
 
 .ui-bar-a{
 	background: #003300;
