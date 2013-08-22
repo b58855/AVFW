@@ -34,24 +34,21 @@
         		<h3>Evan Combs</h3>
         	</header>
         	<div data-role="content">
-        		<div>
-        			<ul data-role="listview">
-        				<li data-role="list-divider" class="divider">iOS & Android Native Feature Demos</li>
-        				<li><a href="#placeholder" data-role="button">Geolocation</a></li>
-        				<li><a href="#placeholder" data-role="button">In App Browser</a></li>
-        				<li><a href="#placeholder" data-role="button">Camera</a></li>
-        				<li><a href="#placeholder" data-role="button">Globalization</a></li>
-        				<li><a href="#placeholder" data-role="button">Storage</a></li>
+                <ul data-role="listview">
+                    <li data-role="list-divider" class="divider">iOS & Android Native Feature Demos</li>
+                    <li><a href="#geolocation" data-role="button">Geolocation</a></li>
+                    <li><a href="#compass" data-role="button">Compass</a></li>
+                    <li><a href="#camera" data-role="button">Camera</a></li>
+                    <li><a href="#notification" data-role="button">Notification</a></li>
 
-        				<li data-role="list-divider" class="divider">Data APIs</li>
-        				<li><a href="#instagramAPI" data-role="button">Instagram</a></li>
-        				<li><a href="#wikilocation" data-role="button">Wikilocation</a></li>
+                    <li data-role="list-divider" class="divider">Data APIs</li>
+                    <li><a href="#instagramAPI" data-role="button">Instagram</a></li>
+                    <li><a href="#wikilocation" data-role="button">Wikilocation</a></li>
 
-        				<li data-role="list-divider" class="divider">Research</li>
-        				<br/>
-        				<a href="#placeholder">Example 1</a>
-        			</ul>
-        		</div>
+                    <li data-role="list-divider" class="divider">Research</li>
+                    <li><a href="#week1" data-role="button">Week 1</a></li>
+                    <li><a href="#week2" data-role="button">Week 2</a></li>
+                </ul>
         		<br/><br/>
         	</div>
         </section>
@@ -92,11 +89,79 @@
         	</content>
         </section>
         
-        <section id="placeholder" data-role="page" data-add-back-btn="true">
+        <section id="geolocation" data-role="page" data-add-back-btn="true">
+        	<header data-role="header" data-position="fixed">
+        		<h1>AVF 1308 Demo App</h1>
+        		<h3>Evan Combs</h3>
+                <h3>Geolocation</h3>
+        	</header>
+            <content>
+            </content>
+        </section>
+        
+        <section id="compass" data-role="page" data-add-back-btn="true">
+        	<header data-role="header" data-position="fixed">
+        		<h1>AVF 1308 Demo App</h1>
+        		<h3>Evan Combs</h3>
+                <h3>Compass</h3>
+        	</header>
+            <content>
+            	<img src="img/compassBack.png" width="275" height="275" id="compassBack"> 
+                <img src="img/compass.png" width="50" height="137.5" id="compassIMG">
+           	</content>
+        </section>
+        
+        <section id="notification" data-role="page" data-add-back-btn="true">
+        	<header data-role="header" data-position="fixed">
+        		<h1>AVF 1308 Demo App</h1>
+        		<h3>Evan Combs</h3>  
+                <h3>Notification</h3>        
+        	</header>
+            <content>
+            	<ul>
+                	<li id="confirm"><a href="#" data-role="button">PRESS ME!!!</a></li>
+                </ul>
+            </content>
+        </section>
+        
+        <section id="camera" data-role="page" data-add-back-btn="true">
+        	<header data-role="header" data-position="fixed">
+        		<h1>AVF 1308 Demo App</h1>
+        		<h3>Evan Combs</h3>
+                <h3>Camera</h3>
+        	</header>
+            <content>
+            </content>
+        </section>
+        
+        <section id="week1" data-role="page" data-add-back-btn="true">
         	<header data-role="header" data-position="fixed">
         		<h1>AVF 1308 Demo App</h1>
         		<h3>Evan Combs</h3>
         	</header>
+            <content>
+            	<p>
+                	1.The biggest advantage to using Twitter for logins and payments is to allow quicker more secure payments, there are fewer logins the user has to remember, and the site can automatically post tweets for the person. If you want people to know you just bought a cool new computer, you don't have to do anything the site does it for you saving a little time and hassle. I find it to be an interesting concept.
+					<br/><br/>2.JSON-P allows for quick and easy access to JSON data from any server or domain without needing to reload the page. This gives the site to pull live data from another source to use.
+					<br/><br/>3.Many sites use JSON, but I found it interesting that YouTube uses it, as well as some other video sites. You could come up with some very interesting combinations using YouTube and native features. I find combining YouTube with geolocation to be the most interesting, or geolocation with anything really. Enter a certain area and the app pulls up a related video that could tell the person anything you want it to say or show. Using geolocation would also be an excellent combination with Wikipedia, Instagram, or some kind of business locator, especially for those new or visiting a location.
+					<br/><br/>4.After looking through everything I can come up with a way to use just about everything with my app idea, but I need to limit it to the essentials to create something that works well even without all the bells and whistles. This means I will be focusing on geolocation, camera, in app browser, media, and storage. I would like to have it pull data from Twitter, Instagram, and Youtube. I was thinking of creating a scavenger hunting app where you can use the app to record what you have and have not done, update your progress for others playing to see, and incorporate internet resources into the game.
+					<br/><br/>5.Over time I have discovered that research is the most important part of the workflow. If you do a good enough job and take enough time researching the rest of the project comes together a lot easier with less surprises. It is impossible to avoid all surprises, but it is important to reduce as many of them as possible. Research never really stops though, I just do less of it. At that point I like to test what I researched, make sure I can get it to work, and I like what it does. Once I know exactly what I want I go into the design phase. Once I get to the actual development it should be mostly straight forward, with a lot of copy and paste from my testing phase, and tweaking of the design.
+                </p>
+            </content>
+        </section>
+        <section id="week2" data-role="page" data-add-back-btn="true">
+        	<header data-role="header" data-position="fixed">
+        		<h1>AVF 1308 Demo App</h1>
+        		<h3>Evan Combs</h3>
+        	</header>
+            <content>
+            	<p>
+                	1.One thing I haven’t used to its full capabilities is the alt attribute in images. Using descriptive words of the pictures would be very useful for the blind, and more informative if the picture doesn’t load properly. At this time I do not see anything else that I could improve, but I am sure as the project progresses I will find more.
+					<br/><br/>2.Most of the little annoyances I heard were more based on the reader either stating unnecessary information, or mispronouncing a word. That is a problem that you could run into though. Misspelled words while to someone who can see might realize what it is supposed to be, if it is too far off the reader might have trouble pronouncing it causing trouble for the listener to understand what is on the page. It is already very important to have correct grammar for those with vision, this is just another reason why correct spelling and grammar is important.
+					<br/><br/>3.Siri and Google’s equivalent are two very prominent apps, that ship with all new iOS and Android devices, are all about accessibility. They both provide for a simple and easy voice interface for doing just about anything on your device. Both are good enough that people want to use them not because they have to, but because they can.
+					<br/><br/>4.On Android there is an app called TalkBack. It provides accessibility features such as spoken, audio, and vibration feedback. Verizon has a whole suit of apps designed to help the blind use their smartphones better. The apps are centered around the core functions of the phone such as calling, texting, calendar, emails, gps, and other features.
+                </p>
+            </content>
         </section>
         
         

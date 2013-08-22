@@ -68,6 +68,33 @@ content ul{
 #instagramAPI content ul li a{
 	font-size: 75%;
 }
+#camera content img{
+	height: 50%;
+	width: 50%;
+	margin: 10px;
+	padding: 2px;
+	border: thin groove #333;
+}
+#geolocation content img{
+	border: thin groove #333;
+}
+#compassIMG{
+	position: absolute;
+	left: 112.5px;
+	top: 0px;
+	z-index: 1;
+}
+#compassBack{
+	position: relative;
+	left: 0px;
+	top: 190px;
+	z-index: 0;
+}
+#compass content{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
 label{
 	margin-top: 4px;
 	margin-bottom: 2px;
