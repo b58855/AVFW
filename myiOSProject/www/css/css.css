@@ -43,8 +43,8 @@ content ul{
 	text-shadow: 0 -1px 0 #000000;
 }
 #wikilocation content ul li a{
-	color: #FFFFFF;
-	text-shadow: 0 -1px 0 #000000;
+	color: #000000;
+	text-shadow: 0 -1px 0 #FFFFFF;
 	text-decoration: none;
 }
 #instagramAPI content ul{

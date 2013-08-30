@@ -1,6 +1,6 @@
 //Global
 function Refresh()
-{
+{https://www.facebook.com/evan.d.combs
 	window.location.reload();
 }
 
@@ -150,10 +150,6 @@ function CompassSuccess(heading)
 	var rotation = 360 - magHeading;
 	var degrees = 'rotate(' + rotation + 'deg)';
 	$('#compassIMG').css('-webkit-transform', degrees);
-
-	/*$('#compass content').html(
-	'<p>Direction: ' + direction +
-	'<br/>Magnetic Heading: ' + magHeading + '</p>');*/
 }
 
 function CompassFail()
@@ -218,4 +214,96 @@ function CameraSuccess(imageLoc)
 function CameraFail()
 {
 	$('#camera content').html('<p>Sorry the image could not load</p>');
+}
+
+
+//Mash-Up Wikilocation + Geolocation
+$('#mu-WG').on('pageinit', function(){
+	console.log('WIKILOCATION + GEOLOCATION');
+	navigator.geolocation.getCurrentPosition(WikiGeoSuccess, WikiGeoFail);
+});
+
+function WikiGeoSuccess(position)
+{
+	var url = 'http://api.wikilocation.org/articles?lat=' + position.coords.latitude + '&lng=' + position.coords.longitude + '&limit=5';
+	
+	$.getJSON(url, function(info){
+		console.log(info);
+		if(info.articles.length > 0)
+		{	
+			$.each(info.articles, function(index){
+				$('#mu-WG content ul').append('<li><a href="#webPage" data-role="button">' + info.articles[index].title + '</a></li>');
+				console.log(info.articles[index].title);
+				$('#mu-WG content ul li:last a').on('click', function(){
+					console.log('In App Browser');
+					var ref = window.open(info.articles[index].mobileurl, '_blank', 'location=yes');
+				});
+			});
+		}
+		else
+		{
+			$('#mu-WG content ul').append('<p>Sorry, there are no Wikipedia articles for this location.</p>');
+		}
+	});
+}
+
+function WikiGeoFail()
+{
+	$('#mu-WG content ul').append('<p>Sorry, could not retrieve your location.</p>');
+}
+
+
+//Mash-up Wikilocation + In App Browser
+$('#mu-WI').on('pageinit', function(){
+	console.log('WIKILOCATION + IN APP BROWSER');
+	DisplayWikiInAppForm()
+	$('#mu-WI content a').on('click', ReadWikiInAppForm);
+});
+
+function DisplayWikiInAppForm()
+{
+	console.log('WIKIINAPPFORM');
+	//turn link into a button
+	$('#mu-WI content').html('<a href="#home">Back</a></br><label>Latitude</label><br /><input></input><br /><label>Longitude</label><br /><input></input><br /><a href="#">Submit</a>');
+}
+
+function ReadWikiInAppForm()
+{
+	console.log('READWIKIINAPPFORM');
+	
+	var lat = $('#mu-WI content input:first').val();
+	var lng = $('#mu-WI content input:last').val();
+	console.log(lat + ' : ' + lng);
+	
+	DisplayWikiInAppResults(lat, lng);
+}
+
+function DisplayWikiInAppResults(lat, lng)
+{
+	console.log('DISPLAYRESULTS');
+	var url = 'http://api.wikilocation.org/articles?lat=' + lat + '&lng=' + lng + '&limit=5';
+	
+	$('#mu-WI content').html('<a href="#">New Location</a><h4>Latitude: ' + lat + '</h4><h4>Longitude: ' + lng + '</h4><ul></ul>');
+	$('#mu-WI content a:last').on('click', Refresh);
+	
+	$.getJSON(url, function(info){
+		console.log(info);
+
+		if(info.articles.length > 0)
+		{	
+			$.each(info.articles, function(index){
+				$('#mu-WI content ul').append('<li><a href="#" data-role="button">' + info.articles[index].title + '</a></li>');
+				console.log(info.articles[index].title);
+				console.log('WIKILOCATION PAGES');
+				$('#mu-WI content ul li:last a').on('click', function(){
+					console.log('In App Browser');
+					var ref = window.open(info.articles[index].mobileurl, '_blank', 'location=yes');
+				});
+			});
+		}
+		else
+		{
+			$('#mu-WI content ul').append('<p>Sorry, there are no Wikipedia articles for this location.</p>');
+		}
+	});
 }
